@@ -8,8 +8,12 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
   </head>
-  <body>
+  <body ng-controller="userController">
   	
 <header class="navbar-inverse" role="banner">
   <div class="container">
@@ -78,11 +82,41 @@
 			  </div>
 			</div>
   	    </div>
+
+  		
+
+
+  	    <div ng-app="" ng-controller="personController">
+
+  	    	<p>                       .</p>
+  	    	<p>Try to change the names.</p>
+
+  	    	First Name: <input type="text" ng-model="firstName"><br>
+  	    	Last Name: <input type="text" ng-model="lastName"><br>
+			<br>
+			Full Name: {{firstName + " " + lastName}}
+
+			</div>
+
+  	    </div>
+
+
+
+
       </div>
     </div>
 
+
     <!-- Latest compiled and minified JavaScript -->
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	  <script>
+		function personController($scope) {
+		    $scope.firstName= "John";
+		    $scope.lastName= "Doe";
+		}
+	  </script>
+	  
+
   </body>
 
 </html>
